@@ -30,11 +30,6 @@ Um reprodutor de áudio baseado em Vue.js para streaming de estações de rádio
 - **Ciclo de Vida**: O gancho `created` inicializa o áudio, configura eventos e pré-carrega capas.
 
 ## Como Usar
-1. **Pré-requisitos**:
-   - Inclua a biblioteca Vue.js 2 via CDN ou localmente.
-   - Crie um arquivo HTML com um elemento `#app` e estilos para a barra de progresso, capa e botões.
-   - Certifique-se de que a imagem de capa (`01.jpg`) esteja no diretório correto.
-
-2. **Instalação**:
+1. **Instalação**:
    - Clone o repositório:
      git clone https://github.com/JEAN-ALMEIDA-CZO/player.git
