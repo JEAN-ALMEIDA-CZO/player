@@ -8,6 +8,13 @@ Um reprodutor de áudio moderno e responsivo desenvolvido em Vue.js para streami
 
 ---
 
+## 🌐 Demonstração
+
+Acesse a página de demonstração do projeto para visualizar o player em ação:  
+👉 [**Ver Demonstração**](https://jean-almeida-czo.github.io/player)
+
+---
+
 ## ✨ Funcionalidades
 
 - ▶️ **Reprodução de Streams** de várias rádios gospel
