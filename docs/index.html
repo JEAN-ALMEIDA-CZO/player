@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://meyerweb.com/eric/tools/css/reset/reset.css"
+    />
+    <style>
+      body {
+        font-family: 'Bitter', serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        max-width: 90%;
+        margin: 0 auto;
+      }
+      .demo-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 2rem;
+      }
+      .demo-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .demo-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .demo-button:hover {
+        background: #555;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+      .demo-button svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.625rem;
+        fill: #fff;
+      }
+      .footer-text {
+        margin-top: 2rem;
+        font-size: 1rem;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .footer-text strong {
+        font-weight: 700;
+      }
+      .footer-text svg {
+        width: 1rem;
+        height: 1rem;
+        fill: #333;
+        vertical-align: middle;
+      }
+      @media (max-width: 768px) {
+        .demo-title {
+          font-size: 2rem;
+        }
+        .demo-button {
+          font-size: 1rem;
+          padding: 0.625rem 1.25rem;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        }
+        .demo-button:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+        }
+        .demo-button svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+        .demo-buttons {
+          gap: 1rem;
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer-text {
+          font-size: 0.9rem;
+        }
+        .footer-text svg {
+          width: 0.9rem;
+          height: 0.9rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .demo-title {
+          font-size: 1.5rem;
+        }
+        .demo-button {
+          font-size: 0.9rem;
+          padding: 0.5rem 1rem;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .demo-button:hover {
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+        .demo-button svg {
+          width: 1rem;
+          height: 1rem;
+        }
+        .wrapper {
+          padding: 10px;
+        }
+        .footer-text {
+          font-size: 0.8rem;
+        }
+        .footer-text svg {
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+    </style>
+    <title>Demostração de Player</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="demo-title">Demostração de Player</h1>
+      <div class="demo-buttons">
+        <a href="radio.html" class="demo-button">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path d="M16 0.32c-8.64 0-15.68 7.04-15.68 15.68s7.04 15.68 15.68 15.68 15.68-7.04 15.68-15.68S24.64 0.32 16 0.32zm0 28.896c-7.296 0-13.216-5.92-13.216-13.216S8.704 2.784 16 2.784 29.216 8.704 29.216 16 23.296 29.216 16 29.216z"></path>
+            <path d="M21.216 15.168l-7.616-5.088c-0.672-0.416-1.504 0.032-1.504 0.832v10.176c0 0.8 0.896 1.248 1.504 0.832l7.616-5.088c0.576-0.416 0.576-1.248 0-1.664z"></path>
+          </svg>
+          Radio Demo
+        </a>
+        <a href="music_player.html" class="demo-button">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path d="M16 0.32c-8.64 0-15.68 7.04-15.68 15.68s7.04 15.68 15.68 15.68 15.68-7.04 15.68-15.68S24.64 0.32 16 0.32zm0 28.896c-7.296 0-13.216-5.92-13.216-13.216S8.704 2.784 16 2.784 29.216 8.704 29.216 16 23.296 29.216 16 29.216z"></path>
+            <path d="M21.216 15.168l-7.616-5.088c-0.672-0.416-1.504 0.032-1.504 0.832v10.176c0 0.8 0.896 1.248 1.504 0.832l7.616-5.088c0.576-0.416 0.576-1.248 0-1.664z"></path>
+          </svg>
+          Music Player Demo
+        </a>
+      </div>
+      <p class="footer-text">
+        Feito com ❤ por <strong>Jean Almeida</strong></p>
+    </div>
+  </body>
+</html>
