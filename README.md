@@ -1,36 +1,53 @@
-# Radio Player Vue.js
+# 🎵 Radio Player Vue.js
 
-Um reprodutor de áudio baseado em Vue.js para streaming de estações de rádio. O projeto oferece uma interface simples e funcional para reproduzir, pausar, navegar entre estações, favoritar e interagir com uma barra de progresso para controle de reprodução.
+[![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](LICENSE.md)
+[![Problemas Abertos](https://img.shields.io/github/issues/JEAN-ALMEIDA-CZO/extensao_chamado_glpi?color=red)](https://github.com/JEAN-ALMEIDA-CZO/extensao_chamado_glpi/issues)
+[![Último Commit](https://img.shields.io/github/last-commit/JEAN-ALMEIDA-CZO/extensao_chamado_glpi?color=blue)](https://github.com/JEAN-ALMEIDA-CZO/extensao_chamado_glpi/commits)
 
-## Funcionalidades
-- **Reprodução de Streams de Rádio**: Suporta streaming de áudio de várias estações de rádio gospel.
-- **Controles de Reprodução**: Botões para play/pausa, próxima faixa e faixa anterior.
-- **Barra de Progresso Interativa**: Permite avançar ou retroceder o áudio clicando na barra de progresso.
-- **Favoritos**: Permite marcar estações como favoritas.
-- **Pré-carregamento de Capas**: Otimiza o carregamento de imagens de capa com prefetch.
-- **Transições Visuais**: Efeitos de transição CSS para troca de faixas.
+Um reprodutor de áudio moderno e responsivo desenvolvido em Vue.js para streaming de **estações de rádio gospel**. Com uma interface elegante e funcional, permite controlar a reprodução de forma intuitiva e fluida.
 
-## Tecnologias Utilizadas
-- **Vue.js 2**: Framework JavaScript para construção da interface reativa.
-- **HTML5 Audio API**: Para manipulação de áudio e streaming.
-- **CSS**: Estilização básica da interface (requer HTML com estilos correspondentes).
+---
 
-## Estrutura do Projeto
-- **JavaScript (script.js)**: O arquivo principal contém a lógica do reprodutor, incluindo gerenciamento de estado, métodos de reprodução e navegação.
-- **Dados**: Lista estática de estações de rádio com nome, artista, capa, URL de streaming e link externo.
-- **Métodos**:
-  - `play()`: Alterna entre reproduzir e pausar o áudio.
-  - `generateTime()`: Atualiza a barra de progresso e exibe o tempo atual/duração.
-  - `updateBar(x)`: Ajusta o tempo do áudio com base em cliques na barra de progresso.
-  - `clickProgress(e)`: Manipula cliques na barra de progresso.
-  - `prevTrack()`: Navega para a faixa anterior.
-  - `nextTrack()`: Navega para a próxima faixa.
-  - `resetPlayer()`: Reseta o reprodutor ao mudar de faixa.
-  - `favorite()`: Alterna o estado de favorito da faixa atual.
-- **Ciclo de Vida**: O gancho `created` inicializa o áudio, configura eventos e pré-carrega capas.
+## ✨ Funcionalidades
 
-## Como Usar
+- ▶️ **Reprodução de Streams** de várias rádios gospel
+- ⏯️ **Play/Pause**, próxima faixa e faixa anterior
+- ⭐ **Favoritos**: marque suas estações preferidas
+- ⏱️ **Barra de Progresso Interativa** com tempo atual e total
+- 📷 **Pré-carregamento de Capas** com `prefetch`
+- 🎨 **Transições Visuais** suaves com CSS
 
-1. **Instalação**:
-   - Clone o repositório:
-     git clone https://github.com/JEAN-ALMEIDA-CZO/player.git
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Vue.js 2** — Framework principal da interface
+- **HTML5 Audio API** — Manipulação e controle de áudio
+- **CSS** — Estilização visual customizada
+
+---
+
+## 🧩 Estrutura do Projeto
+
+- `script.js` — Lógica central do player
+- `data` — Lista estática de estações de rádio (nome, artista, capa, URL, etc.)
+
+### Principais Métodos:
+
+- `play()` — Reproduz ou pausa a faixa atual  
+- `generateTime()` — Atualiza a barra de progresso e tempo  
+- `clickProgress(e)` — Avança ou retrocede o áudio com base no clique  
+- `updateBar(x)` — Sincroniza a barra com o tempo  
+- `prevTrack()` / `nextTrack()` — Alterna entre faixas  
+- `resetPlayer()` — Reseta o estado ao mudar a estação  
+- `favorite()` — Marca/desmarca como favorito  
+- `created()` — Hook de ciclo de vida que inicia o áudio e prefetch das capas
+
+---
+
+## 🚀 Como Usar
+
+1. **Clone o repositório**:
+
+   ```bash
+   git clone https://github.com/JEAN-ALMEIDA-CZO/player.git
