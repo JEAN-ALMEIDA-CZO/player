@@ -1,6 +1,6 @@
 # 🎵 Radio Player Vue.js
 
-[![Licença MIT](https://img.shields.io/badge/Licença-MIT-green.svg)](LICENSE.md)
+[![Licença GNU GPL 3.0](https://img.shields.io/badge/Licença-GNU%20GPL%203.0-green.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Problemas Abertos](https://img.shields.io/github/issues/JEAN-ALMEIDA-CZO/extensao_chamado_glpi?color=red)](https://github.com/JEAN-ALMEIDA-CZO/extensao_chamado_glpi/issues)
 [![Último Commit](https://img.shields.io/github/last-commit/JEAN-ALMEIDA-CZO/extensao_chamado_glpi?color=blue)](https://github.com/JEAN-ALMEIDA-CZO/extensao_chamado_glpi/commits)
 
@@ -58,3 +58,4 @@ Acesse a página de demonstração do projeto para visualizar o player em ação
 
    ```bash
    git clone https://github.com/JEAN-ALMEIDA-CZO/player.git
+   ```
