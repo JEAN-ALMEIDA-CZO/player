@@ -12,6 +12,9 @@ new Vue({
       currentTime: null,
       isTimerPlaying: false,
       isShowCover: false,
+      volume: 1, // Adicionado: volume inicial
+      isMuted: false, // Adicionado: estado de mudo
+      lastVolume: 1, // Adicionado: para armazenar o último volume antes de mutar
       // Lista de faixas
       tracks: [
 		{
@@ -46,7 +49,7 @@ new Vue({
   },
 
 
-  methods: {
+   methods: {
     // Controla a reprodução/pausa do áudio
     play() {
       if (this.audio.paused) {
@@ -161,6 +164,7 @@ new Vue({
       // Reseta o tempo atual do áudio
       this.audio.currentTime = 0;
       this.audio.src = this.currentTrack.source;
+      this.audio.volume = this.volume; // Garante que o volume seja aplicado ao trocar de faixa
       // Aguarda 300ms para garantir a transição e reproduz/pausa conforme o estado
       setTimeout(() => {
         if (this.isTimerPlaying) {
@@ -176,6 +180,30 @@ new Vue({
       this.tracks[this.currentTrackIndex].favorited = !this.tracks[
         this.currentTrackIndex
       ].favorited;
+    },
+
+    // Adicionado: Define o volume do áudio
+    setVolume() {
+      if (this.audio) {
+        this.audio.volume = this.volume;
+        this.isMuted = this.volume === 0;
+        if (this.volume > 0) {
+          this.lastVolume = this.volume; // Armazena o volume atual se não for zero
+        }
+      }
+    },
+
+    // Adicionado: Alterna o estado de mudo
+    toggleMute() {
+      if (this.isMuted) {
+        this.volume = this.lastVolume > 0 ? this.lastVolume : 1; // Restaura o último volume ou define como 1
+        this.isMuted = false;
+      } else {
+        this.lastVolume = this.volume; // Salva o volume atual antes de mutar
+        this.volume = 0;
+        this.isMuted = true;
+      }
+      this.setVolume(); // Aplica o novo volume
     }
   },
 
@@ -185,6 +213,15 @@ new Vue({
     this.currentTrack = this.tracks[0];
     this.audio = new Audio();
     this.audio.src = this.currentTrack.source;
+    this.audio.volume = this.volume; // Define o volume inicial do áudio
+
+    // Adicionado: Atualiza o estado do volume e isMuted se o volume do áudio for alterado externamente
+    this.audio.onvolumechange = function() {
+      if (vm.audio) {
+        vm.volume = vm.audio.volume;
+        vm.isMuted = vm.audio.muted || vm.audio.volume === 0;
+      }
+    };
 
     // Atualiza o tempo de reprodução quando o áudio avança
     this.audio.ontimeupdate = function() {
